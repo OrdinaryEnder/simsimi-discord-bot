@@ -1,26 +1,44 @@
-<div style="display: inline_block">
-  <img align="center" alt="Discord" src="https://github.com/leoodz/discordsimsimi/blob/master/Images/Logo%20Simsimi.png" width="150" height="150">
-  <img align="center" alt="Simsimi" src="https://github.com/leoodz/discordsimsimi/blob/master/Images/discord_logo.png" width="150" height="150">
-  
-</div>
+# Simsimi discord.py
 
-# <> BOT DISCORD + SIMSIMI  
+An ass bot that roast you lol
 
-It is a script that implements a chat-bot API [Simsimi](https://www.simsimi.com/) in a bot associated with the [Discord](https://discord.com/) platform.  
-  
-## Instructions:
+Made in Python™
 
-- First, you must create an application (bot) in Discord. To do this, use the platform's development site: https://discord.com/developers/applications
+## Run the bot
+### Install requirements and run on your system
 
-- Install **requirement** library:
+1. Install Python 3, if you don't know how to then just google it
+
+But on Debian/Ubuntu/Termux you can install Python by running
 ```
-pip install -r requirement
+sudo apt install -y python
 ```
-Change the example.env to .env and fill in the infomation
+remove `sudo` if you are using root account or Termux
 
-------------------------------------------------- -------------------
+2. Install requirements by running
+```
+pip install -r requirements.txt
+```
 
-## Working example:
-<a>
-  <img align="center" alt="Example" src="https://github.com/leoodz/discordsimsimi/blob/master/Images/testes.png" width="350" height="350">
-</a>
+3. Edit `.env` by any text editor
+
+`TOKEN` is your bot's token, if you don't have one then go to [Discord Developer Portal](https://discord.com/developers/applications) and create one
+
+`CHANNEL` is the channel's ID you want the bot to reply to message send there
+
+`LANGUAGE` is for language code, `vi` if you refer the bot to use Vietnamese or `en` if you want the bot to use English
+
+4. Then execute `main.py` by running
+```
+python main.py
+```
+
+### Run on Replit
+
+[![Run on Repl.it](https://repl.it/badge/github/Opstober/simsimi-discord-bot)](https://repl.it/github/Opstober/simsimi-discord-bot)
+
+Clone this repo then when they ask you for run command just type in `python main.py` then just go to Commands > Secret Environment then configure `TOKEN`, `CHANNEL` and `LANGUAGE` then click the run button
+
+## Known Issue
+
+For some strange reason running this bot on termux (dk about other OS), the bot will not working as intended but if you run it on replit it will work normally

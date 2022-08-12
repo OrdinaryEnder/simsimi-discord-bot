@@ -1,32 +1,31 @@
-import discord  
+import discord
+import json
 from simsimi import simsimi
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
-channel_name = os.getenv("channel_name")
-client = discord.Client()
-token = os.getenv("token")
-
-@client.event
-async def on_message(msg):
-  channel = ["simsimi"] # Enter the channel name for the bot to respond, create a channel in your server with this name
-  
-  message = msg.content.lower() # Save the message typed by the user by Discord
-  
-  if msg.author.bot:
-    '''
-    If the message is from a bot, it will not reply
-    '''
-    return
-  
-  if msg.channel.name in channel:
-    response = simsimi(message)
-    await msg.channel.send(response) # Will send Simsimi's reply to the chat where the message was forwarded
+channel = os.getenv("CHANNEL")
+intents = discord.Intents.default()
+client = discord.Client(intents=intents)
+token = os.getenv("TOKEN")
 
 @client.event
 async def on_ready():
-  print(f"{client.user} is online!")
+    print(f"Logged In as {client.user}")
+    await client.change_presence(activity=discord.Game(name="With Simsimi!"))
 
-print(token)
+@client.event
+async def on_message(message):
+  content = message.content
+  if message.author.bot:
+    return
+
+  channel_id = message.channel.id
+  channel_id = str(channel_id)
+  
+  if channel_id in channel:
+    response = simsimi(content)
+    await message.reply(response, mention_author=False)
+
 client.run(token)
