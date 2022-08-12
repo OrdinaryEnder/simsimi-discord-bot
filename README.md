@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 `CHANNEL` is the channel's ID you want the bot to reply to message send there
 
-`LANGUAGE` is for language code, `vi` if you refer the bot to use Vietnamese or `en` if you want the bot to use English
+`LANGUAGE` is for language code, `vn` if you refer the bot to use Vietnamese or `en` if you want the bot to use English
 
 4. Then execute `main.py` by running
 ```
