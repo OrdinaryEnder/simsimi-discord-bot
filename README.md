@@ -35,7 +35,7 @@ python main.py
 
 ### Run on Replit
 
-[![Run on Repl.it](https://repl.it/badge/github/Opstober/simsimi-discord-bot)](https://repl.it/github/Opstober/simsimi-discord-bot)
+[![Run on Repl.it](https://repl.it/badge/github/Opstober/simsimi-discord-bot)](https://replit.com/@Opstober/simsimi-discord-bot)
 
 Clone this repo then when they ask you for run command just type in `python main.py` then just go to Commands > Secret Environment then configure `TOKEN`, `CHANNEL` and `LANGUAGE` then click the run button
 
