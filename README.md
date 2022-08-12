@@ -1,4 +1,4 @@
-# Simsimi discord.py
+# Simsimi discord bot
 
 An ass bot that roast you lol
 
