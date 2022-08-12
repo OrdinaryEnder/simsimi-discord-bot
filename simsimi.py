@@ -9,7 +9,6 @@ load_dotenv()
 language = os.getenv("LANGUAGE")
 
 def simsimi(content):
-    print(content)
     url = f'https://api.simsimi.net/v2/?text={content}&lc={language}'
     response = scraper.get(url).text
     soup = BeautifulSoup(response, 'html.parser')
