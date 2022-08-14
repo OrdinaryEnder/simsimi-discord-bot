@@ -6,7 +6,7 @@ import os
 
 load_dotenv()
 channel = os.getenv("CHANNEL")
-intents = discord.Intents.default()
+intents = discord.Intents().all()
 client = discord.Client(intents=intents)
 token = os.getenv("TOKEN")
 
