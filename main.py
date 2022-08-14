@@ -6,9 +6,9 @@ import os
 
 load_dotenv()
 channel = os.getenv("CHANNEL")
+token = os.getenv("TOKEN")
 intents = discord.Intents().all()
 client = discord.Client(intents=intents)
-token = os.getenv("TOKEN")
 
 @client.event
 async def on_ready():
