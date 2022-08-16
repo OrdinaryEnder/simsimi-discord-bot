@@ -4,7 +4,7 @@ An ass bot that roast you lol
 
 Now reply your message in DM!
 
-Thank OrdinaryEnder for the Idea and code
+Thank [OrdinaryEnder](https://github.com/OrdinaryEnder) for the Idea and code
 
 Made in Python™
 
