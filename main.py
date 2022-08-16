@@ -28,4 +28,8 @@ async def on_message(message):
     response = simsimi(content)
     await message.reply(response, mention_author=False)
 
+  if isinstance(message.channel, discord.DMChannel):
+    response = simsimi(content)
+    await message.reply(response, mention_author=False)
+
 client.run(token)

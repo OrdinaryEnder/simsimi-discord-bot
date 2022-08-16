@@ -1,2 +1,4 @@
 cloudscraper
 discord
+python-dotenv
+bs4
