@@ -38,7 +38,3 @@ python main.py
 [![Run on Repl.it](https://repl.it/badge/github/Opstober/simsimi-discord-bot)](https://replit.com/@Opstober/simsimi-discord-bot)
 
 Clone this repo then when they ask you for run command just type in `python main.py` then just go to Commands > Secret Environment then configure `TOKEN`, `CHANNEL` and `LANGUAGE` then click the run button
-
-## Known Issue
-
-For some strange reason running this bot on termux (dk about other OS), the bot will not working as intended but if you run it on replit it will work normally
