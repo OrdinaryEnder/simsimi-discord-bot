@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-channel = os.getenv("CHANNEL")
 intents = discord.Intents().all()
 client = discord.Client(intents=intents)
 token = os.getenv("TOKEN")
@@ -21,10 +20,7 @@ async def on_message(message):
   if message.author.bot:
     return
 
-  channel_id = message.channel.id
-  channel_id = str(channel_id)
-  
-  if channel_id in channel:
+  if isinstance(message.channel, discord.DMChannel):
     response = simsimi(content)
     await message.reply(response, mention_author=False)
 
