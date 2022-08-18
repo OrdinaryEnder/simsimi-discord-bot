@@ -23,6 +23,12 @@ async def on_message(message):
   if message.author.bot:
     return
 
+ 
+  if channel_id in channel:
+    response = await simsimi(content)
+    await message.reply(response, mention_author=False)
+
+
   if isinstance(message.channel, discord.DMChannel):
     response = await simsimi(content)
     await message.reply(response, mention_author=False)
