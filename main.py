@@ -3,6 +3,8 @@ import json
 from simsimi import simsimi
 from dotenv import load_dotenv
 import os
+import aiohttp
+
 
 load_dotenv()
 channel = os.getenv("CHANNEL")
@@ -22,7 +24,7 @@ async def on_message(message):
     return
 
   if isinstance(message.channel, discord.DMChannel):
-    response = simsimi(content)
+    response = await simsimi(content)
     await message.reply(response, mention_author=False)
 
 client.run(token)
