@@ -23,7 +23,9 @@ async def on_message(message):
   if message.author.bot:
     return
 
- 
+  channel_id = message.channel.id
+  channel_id = str(channel_id)
+  
   if channel_id in channel:
     response = await simsimi(content)
     await message.reply(response, mention_author=False)
